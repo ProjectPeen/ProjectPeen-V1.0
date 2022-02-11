@@ -127,7 +127,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `WOW, nice ${CONFIG.NFT_NAME}! Visit Opensea.io to view it.`
+          `Nice ${CONFIG.NFT_NAME}! Visit Opensea.io to view it.`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -217,7 +217,7 @@ function App() {
               }}
             >
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {truncate(CONFIG.CONTRACT_ADDRESS)}
+                {truncate(CONFIG.CONTRACT_ADDRESS, 30)}
               </StyledLink>
             </s.TextDescription>
             <s.SpacerSmall />
